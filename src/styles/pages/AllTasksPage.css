@@ -1,0 +1,24 @@
+
+.category-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.task-category{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: aqua;
+}
+
+.task-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.task-item h4,p{
+    margin: 0 2rem;
+    padding: 0;
+}
