@@ -3,7 +3,7 @@ import {useState} from "react";
 
 import AvailableTasks from "../components/AvailableTasks";
 import demoTaskList from "../demoData/demoTaskList";
-import AddNewTask from "../components/AddNewTask";
+import InputNewCategory from "../components/InputNewCategory";
 
 //import css
 import "../styles/pages/AllTasksPage.css";
@@ -12,7 +12,7 @@ function AllTasksPage() {
 
   const [tasks, setTasks] = useState(demoTaskList);
 
-  const addNewCategory = (newCategoryName) => {
+  const AddNewCategoryItem = (newCategoryName) => {
     const newCategory = {
       categoryName: newCategoryName,
       tasks: []
@@ -31,8 +31,7 @@ function AllTasksPage() {
         <AvailableTasks listOfTasks={tasks}/>
 
         {/* box to add new tasks to the list */}
-        <AddNewTask onAddTask={addNewCategory}/>
-
+        <InputNewCategory onAddTask={AddNewCategoryItem}/>
     </div>
   )
 

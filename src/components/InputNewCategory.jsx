@@ -3,7 +3,7 @@
 import React from 'react';
 import {useState} from 'react';
 
-export default function AddNewTask({onAddTask}) {
+export default function AddNewCategory({onAddTask}) {
 
     const [categoryName, setCategoryName] = useState('');
 
