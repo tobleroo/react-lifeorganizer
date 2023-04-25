@@ -2,7 +2,11 @@
 .AllComponentsBox{
     display: flex;
     flex-direction: row;
+    justify-content:space-evenly;
     background-color: azure;
+    width: 100%;
+    max-width: 90rem;
+    /* margin: 0 1rem; */
 }
 
 /* tasks list (to the left) */
@@ -16,10 +20,12 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    max-width: 25rem;
 }
 
 .taskCategoryBox{
     background-color: red;
+    overflow: scroll;
 }
 
 .one-category{
@@ -28,9 +34,55 @@
     background-color: aliceblue;
     margin: 1rem 0;
     border-radius: 15px;
-    padding: .5rem 3rem;
+    padding: .5rem 2rem;
 }
 
+.oneTaskData{
+    display: flex;
+    flex-direction: column;
+    border: solid black 1px;
+    margin: .5rem 0;
+    background-color: lawngreen;
+}
+
+.taskName{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.smallData{
+    display: flex;
+    flex-direction: row;
+}
+
+.dataBox{
+    display: flex;
+    flex-direction: column;
+    margin: 0 .5rem;
+    border: solid black 1px;
+    border-radius: 15px;
+    padding: .5rem;
+}
+
+.dataBox b, p{
+    padding: 0;
+    margin: 0;
+}
+
+.descBox{
+    width: 100%;
+    border-radius: 15px;
+    padding: .5rem;
+    margin: .5rem 0;
+}
+
+.descBox p{
+    border: solid 1px black;
+    width: 90%;
+    border-radius: 15px;
+    padding: .4rem;
+}
 /* middle section */
 
 .middleBar{
@@ -57,33 +109,13 @@
 /* right section */
 
 .CalendarBox{
-    background-color: gainsboro;
-    min-width: 20rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.CalendarCard{
-    min-width: 10rem;
-    padding: 2rem;
-    background-color: blueviolet;
-    margin: 3rem;
+    background-color: grey;
+    border: solid black 1px;
+    margin: 1rem 0;
     border-radius: 15px;
 }
 
-.date-box{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.tasks{
-    display: flex;
-    flex-direction: column;
-}
-
-.tasks h5{
+.CalendarText h3, p{
     padding: 0;
     margin: 0;
 }
