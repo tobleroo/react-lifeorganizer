@@ -2,9 +2,11 @@
 
 .navBar{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
     background-color: rebeccapurple;
+    margin: .5rem 1rem;
+    border-radius: 15px;
 }
 
 .navBar a{
@@ -12,6 +14,7 @@
     font-size: x-large;
     padding: 1rem 0;
     background-color: inherit;
+    margin-top: 1rem;
 }
 
 .navBar a:hover{

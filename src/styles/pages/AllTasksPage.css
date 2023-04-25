@@ -1,24 +1,89 @@
 
-.category-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.task-category{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: aqua;
-}
-
-.task-item{
+.AllComponentsBox{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    background-color: azure;
 }
 
-.task-item h4,p{
-    margin: 0 2rem;
+/* tasks list (to the left) */
+
+.tasks-box{
+    background-color: gray;
+    margin: 1rem;
+    padding: 0 1rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.taskCategoryBox{
+    background-color: red;
+}
+
+.one-category{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    margin: 1rem 0;
+    border-radius: 15px;
+    padding: .5rem 3rem;
+}
+
+/* middle section */
+
+.middleBar{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1.5rem;
+}
+
+.ChosenDate, .AddTaskBox{
+    padding: 0 3rem;
+}
+
+.ChosenDate{
+    background-color: aqua;
+    height: 40%;
+}
+
+.AddTaskBox{
+    background-color: antiquewhite;
+    height: 35%;
+    margin-top: 3rem;
+}
+
+/* right section */
+
+.CalendarBox{
+    background-color: gainsboro;
+    min-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CalendarCard{
+    min-width: 10rem;
+    padding: 2rem;
+    background-color: blueviolet;
+    margin: 3rem;
+    border-radius: 15px;
+}
+
+.date-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tasks{
+    display: flex;
+    flex-direction: column;
+}
+
+.tasks h5{
     padding: 0;
+    margin: 0;
 }

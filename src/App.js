@@ -3,7 +3,7 @@ import './App.css';
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AllTasksPage from './pages/AllTasksPage';
+import AllTasksPage from './pages/todoPage/AllTasksPage';
 import HomePage from './pages/HomePage';
 import NavBar from './components/NavBar';
 
