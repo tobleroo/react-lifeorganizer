@@ -2,7 +2,11 @@
 .AllComponentsBox{
     display: flex;
     flex-direction: row;
+    justify-content:space-evenly;
     background-color: azure;
+    width: 100%;
+    max-width: 90rem;
+    /* margin: 0 1rem; */
 }
 
 /* tasks list (to the left) */
@@ -16,10 +20,12 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    max-width: 25rem;
 }
 
 .taskCategoryBox{
     background-color: red;
+    overflow: scroll;
 }
 
 .one-category{
@@ -28,7 +34,66 @@
     background-color: aliceblue;
     margin: 1rem 0;
     border-radius: 15px;
-    padding: .5rem 3rem;
+    padding: .5rem 2rem;
+}
+
+.oneTaskData{
+    display: flex;
+    flex-direction: column;
+    border: solid black 1px;
+    margin: .5rem 0;
+    background-color: lawngreen;
+}
+
+.taskName{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.smallData{
+    display: flex;
+    flex-direction: row;
+}
+
+.dataBox{
+    display: flex;
+    flex-direction: column;
+    margin: 0 .5rem;
+    border: solid black 1px;
+    border-radius: 15px;
+    padding: .5rem;
+}
+
+.dataBox b, p{
+    padding: 0;
+    margin: 0;
+}
+
+.descBox{
+    width: 100%;
+    border-radius: 15px;
+    padding: .5rem;
+    margin: .5rem 0;
+}
+
+.taskItemData{
+    display: flex;
+    flex-direction: row;
+    margin: .5rem 0;
+    border-bottom: solid black 1px;
+}
+
+.taskData{
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    /* margin-left: 1rem; */
+    border: solid black 1px;
+}
+.taskData label,p{
+    margin: 0;
+    padding: 0;
 }
 
 .taskItemData{
@@ -56,6 +121,18 @@
 
 
 
+
+
+
+
+
+
+.descBox p{
+    border: solid 1px black;
+    width: 90%;
+    border-radius: 15px;
+    padding: .4rem;
+}
 /* middle section */
 
 .middleBar{
