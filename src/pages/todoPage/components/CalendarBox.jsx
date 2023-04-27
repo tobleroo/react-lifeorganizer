@@ -12,6 +12,7 @@ export default function CalendarBox(){
             <p>2023</p>
 
             <WeeklyCalendarCard/>
+            <WeeklyCalendarCard/>
         </div>
     )
 }

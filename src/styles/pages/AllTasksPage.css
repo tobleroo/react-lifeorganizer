@@ -31,6 +31,31 @@
     padding: .5rem 3rem;
 }
 
+.taskItemData{
+    display: flex;
+    flex-direction: row;
+    margin: .5rem 0;
+    border-bottom: solid black 1px;
+}
+
+.taskData{
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    /* margin-left: 1rem; */
+    border: solid black 1px;
+}
+.taskData label,p{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
 /* middle section */
 
 .middleBar{
@@ -39,6 +64,10 @@
     margin: 1rem 1.5rem;
 }
 
+
+
+/* chosen date box */
+
 .ChosenDate, .AddTaskBox{
     padding: 0 3rem;
 }
@@ -46,13 +75,116 @@
 .ChosenDate{
     background-color: aqua;
     height: 40%;
+    display: flex;
+    flex-direction: column;
 }
 
-.AddTaskBox{
+.chosenDateTaskBox{
     background-color: antiquewhite;
-    height: 35%;
+    height: 60%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.ChosenDateTask{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    border-bottom: solid black 2px;
+}
+
+.handleTask{
+    display: flex;
+    flex-direction: row;
+}
+
+.ChosenDateTask p{
+    margin: 0;
+    padding: 0;
+    margin-right: 1rem;
+}
+
+.ChosenDateTask input{
+    margin: 0;
+    padding: 0;
+}
+
+.chosenDayNumbers{
+    margin-top: auto;
+}
+
+
+
+/* add tasks box */
+
+.AddTaskBox{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(146, 101, 43);
+    /* height: 35%; */
     margin-top: 3rem;
 }
+
+.addTaskInputBox input,label{
+    font-size: large;
+}
+
+.inputTaskName, .addTaskTimeBox{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.addTaskDescBox textarea{
+    width: 100%;
+    height: 10rem;
+    font-size: large;
+}
+
+.addTaskBtnBox{
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.addTaskBtnBox button{
+    margin: 1rem;
+    font-size: larger;
+    background-color: transparent;
+    border-color: green;
+    border-radius: 15px;
+}
+
+.addTaskBtnBox button:hover{
+    cursor: pointer;
+    background-color: aqua;
+}
+
+
+/* save to backend  */
+
+.toBackEnd{
+    margin: 3rem auto;;
+}
+.toBackEnd button{
+    font-size: x-large;
+    background-color: transparent;
+    border-color: green;
+    border-radius: 15px;
+}
+.toBackEnd button:hover{
+    cursor: pointer;
+    background-color: aqua;
+}
+
+
+
+
+
 
 /* right section */
 
@@ -62,28 +194,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: scroll;
 }
 
-.CalendarCard{
-    min-width: 10rem;
-    padding: 2rem;
-    background-color: blueviolet;
-    margin: 3rem;
+.calendarWeekCard{
+    width: 100%;
     border-radius: 15px;
+
 }
 
 .date-box{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.tasks{
-    display: flex;
     flex-direction: column;
+    background-color: aquamarine;
+    border-radius: 15px;
+    width: 90%;
+    margin: 1rem .5rem;
 }
 
-.tasks h5{
+.date{
+    display: flex;
+    flex-direction: row;
+    margin-left: 1rem;
+}
+
+.tasks p{
     padding: 0;
-    margin: 0;
+    margin: 0 2rem;
 }

@@ -12,6 +12,10 @@ export  default function SelectedDate(){
 
             <AddTasks/>
 
+            <div className="toBackEnd">
+                <button>Save all</button>
+            </div>
+
         </div>
     )
 
