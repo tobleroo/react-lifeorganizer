@@ -1,16 +1,13 @@
 
 
 import TaskItem from "./TaskItem"
-export default function TaskCategory({allTasks}){
-
-    console.log(allTasks)
-
+export default function TaskCategory({allTasksData}){
 
     return (
         <div className="taskCategoryBox">
 
-            {allTasks.length ? (
-                allTasks.map((task, index) => (
+            {allTasksData.length ? (
+                allTasksData.map((task, index) => (
                     <div className="one-category" key={index}>
                         <h2>{task.categoryName}</h2>
                         {task.tasks.length ? (

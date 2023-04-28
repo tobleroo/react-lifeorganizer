@@ -7,7 +7,7 @@ export default function TasksBox({allTasks}){
         <div className="tasks-box">
             <h2>Saved tasks</h2>
 
-            <TaskCategory allTasks={allTasks}/>
+            <TaskCategory allTasksData={allTasks}/>
 
         </div>
     )

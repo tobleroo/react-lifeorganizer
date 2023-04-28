@@ -5,45 +5,136 @@ export default function demoTodoCalendar(){
 
 
     // return list of year with month and date with tasks
-    return [
+    const calendar = [
         {
-            year: 2020,
-            month: 1,
-            date: 1,
-            tasks: [
+          "year": "2021",
+          "months": [
+            {
+              "name": "January",
+              "days": [
                 {
-                    id: 1,
-                    title: "task 1",
-                    description: "task 1 description",
-                    status: "done"
+                  "date": "2021-01-01",
+                  "dayOfWeek": "Friday",
+                  "tasks": [
+                    {
+                      "title": "New Year's Day",
+                      "completed": true,
+                      "timeToComplete": 60
+                    }
+                  ]
                 },
                 {
-                    id: 2,
-                    title: "task 2",
-                    description: "task 2 description",
-                    status: "done"
+                  "date": "2021-01-02",
+                  "dayOfWeek": "Saturday",
+                  "tasks": [
+                    {
+                      "title": "Buy groceries",
+                      "completed": false,
+                      "timeToComplete": 30
+                    }
+                  ]
                 },
-            ]
+              ]
+            },
+            {
+              "name": "February",
+              "days": [
+                {
+                  "date": "2021-02-01",
+                  "dayOfWeek": "Monday",
+                  "tasks": [
+                    {
+                      "title": "Meeting with client A",
+                      "completed": true,
+                      "timeToComplete": 120
+                    },
+                    {
+                      "title": "Submit expense report",
+                      "completed": false,
+                      "timeToComplete": 60
+                    }
+                  ]
+                },
+                {
+                  "date": "2021-02-02",
+                  "dayOfWeek": "Tuesday",
+                  "tasks": [
+                    {
+                      "title": "Prepare presentation for meeting",
+                      "completed": true,
+                      "timeToComplete": 90
+                    }
+                  ]
+                },
+              ]
+            },
+          ]
         },
         {
-            year: 2020,
-            month: 1,
-            date: 2,
-            tasks: [
+          "year": "2022",
+          "months": [
+            {
+              "name": "January",
+              "days": [
                 {
-                    id: 3,
-                    title: "task 3",
-                    description: "task 3 description",
-                    status: "done"
+                  "date": "2022-01-01",
+                  "dayOfWeek": "Saturday",
+                  "tasks": [
+                    {
+                      "title": "New Year's Day",
+                      "completed": true,
+                      "timeToComplete": 60
+                    }
+                  ]
                 },
                 {
-                    id: 4,
-                    title: "task 4",
-                    description: "task 4 description",
-                    status: "done"
+                  "date": "2022-01-02",
+                  "dayOfWeek": "Sunday",
+                  "tasks": [
+                    {
+                      "title": "Attend friend's birthday party",
+                      "completed": false,
+                      "timeToComplete": 180
+                    }
+                  ]
                 },
-            ]
+              ]
+            },
+            {
+              "name": "February",
+              "days": [
+                {
+                  "date": "2022-02-01",
+                  "dayOfWeek": "Tuesday",
+                  "tasks": [
+                    {
+                      "title": "Meeting with client B",
+                      "completed": true,
+                      "timeToComplete": 90
+                    },
+                    {
+                      "title": "Follow up with supplier",
+                      "completed": false,
+                      "timeToComplete": 60
+                    }
+                  ]
+                },
+                {
+                  "date": "2022-02-02",
+                  "dayOfWeek": "Wednesday",
+                  "tasks": [
+                    {
+                      "title": "Create budget plan for Q2",
+                      "completed": false,
+                      "timeToComplete": 120
+                    }
+                  ]
+                },
+              ]
+            }
+          ]
         }
-    ]
+      ];
 
+    return calendar;
 }

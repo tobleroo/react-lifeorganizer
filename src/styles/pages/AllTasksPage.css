@@ -274,28 +274,3 @@
     overflow: scroll;
 }
 
-.calendarWeekCard{
-    width: 100%;
-    border-radius: 15px;
-
-}
-
-.date-box{
-    display: flex;
-    flex-direction: column;
-    background-color: aquamarine;
-    border-radius: 15px;
-    width: 90%;
-    margin: 1rem .5rem;
-}
-
-.date{
-    display: flex;
-    flex-direction: row;
-    margin-left: 1rem;
-}
-
-.tasks p{
-    padding: 0;
-    margin: 0 2rem;
-}

@@ -1,6 +1,6 @@
 
 function demoTaskList(){
-    return [
+    const tasklist = [
         {
             categoryName: "cleaning",
             tasks: [{
@@ -40,6 +40,8 @@ function demoTaskList(){
                 }
             ]
         }]
+
+    return tasklist;
 }
 
 export default demoTaskList;

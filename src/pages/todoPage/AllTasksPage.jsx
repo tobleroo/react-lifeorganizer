@@ -4,13 +4,15 @@ import { useState, useEffect } from "react";
 
 import TasksBox from "./components/TasksBox";
 import SelectedDate from "./components/SelectedDate";
-import CalendarBox from "./components/CalendarBox";
+import CalendarYearBox from "./components/CalendarYearBox";
 
 //import AllTasksPage css file
 import "../../styles/pages/AllTasksPage.css"
 
 //demo data
-import demoAllDataCollected from "../../demoData/demoAllDataCollected";
+// import demoAllDataCollected from "../../demoData/demoAllDataCollected";
+import demoTaskList from "../../demoData/demoTaskList";
+import demoTodoCalendar from "../../demoData/demoTodoCalendar";
 
 
 function AllTasksPage() {
@@ -21,25 +23,21 @@ function AllTasksPage() {
   // console.log(savedTasks);
 
   useEffect(() => {
-    const allData = demoAllDataCollected();
-    const allTasks = allData.taskList;
-    setSavedTasks(allTasks);
+    setSavedTasks(demoTaskList);
+    setCalendarData(demoTodoCalendar);
 
-    const calendarDataJson = allData.todoCalendar;
-    setCalendarData(calendarDataJson);
-    // console.log('calendar 2 ->' + allData.todoCalendar);
-
-    console.log('calendar 3 ->' + CalendarData);
   }, []);
 
   return(
     <div className="AllComponentsBox">
 
-        {/* <TasksBox allTasks={savedTasks}/> */}
+        <TasksBox allTasks={savedTasks}/>
 
         <SelectedDate/>
 
-        <CalendarBox/>
+        
+        <CalendarYearBox yearData={CalendarData}/>
+        {/* <CalendarBox calendarData={CalendarData}/> */}
     </div>
   )
 
