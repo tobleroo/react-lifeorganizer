@@ -1,9 +1,33 @@
 
+import { useState } from "react";
 
-export default function NewTaskInput(){
+export default function NewTaskInput({savedTasks}){
+
+    const [categories, setCategories] = useState(getAllCategories(savedTasks));
+
+    function getAllCategories(savedTasks){
+        let categories = [];
+        savedTasks.forEach(task => {
+            categories.push(task.categoryName);
+        });
+        return categories;
+    }
 
     return (
         <div className="addTaskInputBox">
+                <div className="categoriSelectedBox">
+                    <label htmlFor="category">Category</label>
+                    <input type="text" id="category" name="category" list="category-list" />
+                    <datalist id="category-list">
+                        {categories.length ? (
+                            categories.map((category, index) => {
+                            return <option key={index} value={category} />;
+                            })
+                        ) : (
+                            <option value="no data">no data</option>
+                        )}
+                    </datalist>
+                </div>
                 <div className="inputTaskName">
                     <label htmlFor="taskName">Task name</label>
                     <input type="text" name="taskName" placeholder="task name" />

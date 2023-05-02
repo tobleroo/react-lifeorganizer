@@ -14,30 +14,30 @@ import "../../styles/pages/AllTasksPage.css"
 import demoTaskList from "../../demoData/demoTaskList";
 import demoTodoCalendar from "../../demoData/demoTodoCalendar";
 
+// working on saving tasks to tasks database (left bar on page)
+//currently got categories to work in add task input
+//need to work on saving tasks to database
 
 function AllTasksPage() {
 
   const [savedTasks, setSavedTasks] = useState([]);
   const [CalendarData, setCalendarData] = useState([]);
 
-  // console.log(savedTasks);
-
   useEffect(() => {
     setSavedTasks(demoTaskList);
     setCalendarData(demoTodoCalendar);
 
-  }, []);
+  }, [setSavedTasks, setCalendarData]);
 
   return(
     <div className="AllComponentsBox">
 
         <TasksBox allTasks={savedTasks}/>
 
-        <SelectedDate/>
+        <SelectedDate savedTasks={savedTasks}
+        setSavedTasks={setSavedTasks}/>
 
-        
         <CalendarYearBox yearData={CalendarData}/>
-        {/* <CalendarBox calendarData={CalendarData}/> */}
     </div>
   )
 
