@@ -8,6 +8,7 @@ function demoTaskList(){
                     taskDescription: "clean the bathroom",
                     timeToComplete: 30,
                     timeCompleted: 0,
+
                 },{
                     taskName: "clean the kitchen",
                     taskDescription: "clean the kitchen",
