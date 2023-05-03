@@ -20,6 +20,11 @@ export default function demoTodoCalendar(){
                       "title": "New Year's Day",
                       "completed": true,
                       "timeToComplete": 60
+                    },
+                    {
+                      "title": "Submit expense report",
+                      "completed": false,
+                      "timeToComplete": 30
                     }
                   ]
                 },

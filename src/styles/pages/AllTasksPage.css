@@ -274,3 +274,11 @@
     overflow: scroll;
 }
 
+.dayBox{
+    background-color: rgb(82, 177, 82);
+}
+
+.dayBox:hover{
+    cursor: pointer;
+}
+

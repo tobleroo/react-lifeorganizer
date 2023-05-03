@@ -38,6 +38,12 @@ export default function AddTasks({savedTasks, setSavedTasks}){
         setSavedTasks([...savedTasks]); // create a new copy of the array to trigger re-render
     }
 
+    //save task to selected date
+
+    function saveToSelected(){
+
+    };
+
     function createTaskFromInput(){
         
         const taskName = document.querySelector('[name="taskName"]').value;

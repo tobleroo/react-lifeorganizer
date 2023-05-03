@@ -22,24 +22,44 @@ function AllTasksPage() {
 
   const [savedTasks, setSavedTasks] = useState([]);
   const [CalendarData, setCalendarData] = useState([]);
+  const [selectedDate, setSelectedDate] = useState(null);
 
   useEffect(() => {
     setSavedTasks(demoTaskList);
     setCalendarData(demoTodoCalendar);
+  }, []);
 
-  }, [setSavedTasks, setCalendarData]);
+  useEffect(() => {
+    if (CalendarData && CalendarData.length > 0) {
+      setTodayDate();
+      console.log("selectedDate", selectedDate);
+    }
+  }, [CalendarData, selectedDate]);
 
-  return(
-    <div className="AllComponentsBox">
+  function setTodayDate(){
+    //for demo purposes
+    const today = '2021-01-01';
 
-        <TasksBox allTasks={savedTasks}/>
+    const todayDate = CalendarData[0].months[0].days.find(day => day.date === today);
+    setSelectedDate(todayDate);
+  }
 
-        <SelectedDate savedTasks={savedTasks}
-        setSavedTasks={setSavedTasks}/>
+  function changeSelectedDate(dayData) {
+    setSelectedDate(dayData);
+  }
 
-        <CalendarYearBox yearData={CalendarData}/>
-    </div>
-  )
+  if (savedTasks.length > 0 && CalendarData.length > 0 && selectedDate) {
+    return(
+      <div className="AllComponentsBox">
+          <TasksBox allTasks={savedTasks}/>
+          <SelectedDate savedTasks={savedTasks} setSavedTasks={setSavedTasks} selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
+          <CalendarYearBox yearData={CalendarData}/>
+      </div>
+    )
+  } else {
+    // Render a loading spinner or message while the data is being loaded
+    return <div>Loading...</div>;
+  }
 
 }
 

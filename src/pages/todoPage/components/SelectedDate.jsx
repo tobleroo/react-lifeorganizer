@@ -3,12 +3,12 @@ import ChosenDate from "./ChosenDate"
 import AddTasks from "./AddTasks"
 
 
-export  default function SelectedDate({savedTasks, setSavedTasks}){
+export  default function SelectedDate({savedTasks, setSavedTasks, selectedDate ,setSelectedDate}){
 
     return (
         <div className="middleBar">
 
-            <ChosenDate/>
+            <ChosenDate selectedDate={selectedDate}/>
 
             <AddTasks savedTasks={savedTasks}
             setSavedTasks={setSavedTasks}/>
