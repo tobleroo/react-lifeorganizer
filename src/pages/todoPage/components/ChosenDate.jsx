@@ -1,7 +1,7 @@
 
 import ChosenDateTask from "./ChosenDateTask"
 
-export default function ChosenDate({selectedDate}){
+export default function ChosenDate({selectedDate, setSelectedDate}){
 
     function totalTime(){
         let totalTime = 0;
@@ -20,7 +20,7 @@ export default function ChosenDate({selectedDate}){
             
             <div className="chosenDateTasksBox">
                 <h4>tasks</h4>
-                <ChosenDateTask tasks={selectedDate.tasks}/>
+                <ChosenDateTask selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
             </div>
             
             <div className="chosenDayNumbers">

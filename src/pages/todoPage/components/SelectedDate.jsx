@@ -8,7 +8,7 @@ export  default function SelectedDate({savedTasks, setSavedTasks, selectedDate, 
     return (
         <div className="middleBar">
 
-            <ChosenDate selectedDate={selectedDate}/>
+            <ChosenDate selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
 
             <AddTasks savedTasks={savedTasks}
             setSavedTasks={setSavedTasks}

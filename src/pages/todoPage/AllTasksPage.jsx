@@ -14,10 +14,6 @@ import "../../styles/pages/AllTasksPage.css"
 import demoTaskList from "../../demoData/demoTaskList";
 import demoTodoCalendar from "../../demoData/demoTodoCalendar";
 
-// working on saving tasks to tasks database (left bar on page)
-//currently got categories to work in add task input
-//need to work on saving tasks to database
-
 function AllTasksPage() {
 
   const [savedTasks, setSavedTasks] = useState([]);
@@ -63,3 +59,5 @@ function AllTasksPage() {
 }
 
 export default AllTasksPage;
+
+///create a add btn for each tasks to add to day from db list
