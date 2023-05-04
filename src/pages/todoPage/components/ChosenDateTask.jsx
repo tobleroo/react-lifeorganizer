@@ -1,16 +1,29 @@
 
 
 
-export default function ChosenDateTask({ selectedDate, setSelectedDate }) {
+export default function ChosenDateTask({ selectedDate, setSelectedDate, CalendarData, setCalendarData }) {
 
 
     function removeOneTask(task){
-        //remove one task from tasks array
-        //create a dupplicate and remove the task from it
-        const newSelectedDate = { ...selectedDate };
-        const newTasks = newSelectedDate.tasks.filter(taskItem => taskItem.title !== task.title);
-        newSelectedDate.tasks = newTasks;
-        setSelectedDate(newSelectedDate);
+
+        const dateToUse = selectedDate.date;
+
+        //create dupplicate of calendarData
+        const calendarDataCopy = [...CalendarData];
+        //remove the task from the spepcific day
+        calendarDataCopy.forEach(year => {
+            year.months.forEach(month => {
+                month.days.forEach(day => {
+                    if(day.date === dateToUse){
+                        day.tasks = day.tasks.filter(taskToCheck => taskToCheck.title !== task.title);
+                        setSelectedDate(day);
+                        setCalendarData(calendarDataCopy);
+                    }
+                })
+            })
+        })
+        
+        // console.log(dateToUse);
         
     }
 

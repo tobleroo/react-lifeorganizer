@@ -1,7 +1,7 @@
 
 
 import TaskItem from "./TaskItem"
-export default function TaskCategory({allTasksData}){
+export default function TaskCategory({allTasksData, selectedDate, setSelectedDate}){
 
     return (
         <div className="taskCategoryBox">
@@ -12,7 +12,9 @@ export default function TaskCategory({allTasksData}){
                         <h2>{task.categoryName}</h2>
                         {task.tasks.length ? (
                             task.tasks.map((task, index) => (
-                            <TaskItem task={task} key={index}/>
+                            <TaskItem task={task} key={index}
+                            selectedDate={selectedDate}
+                            setSelectedDate={setSelectedDate}/>
                             )))
                             : (<h3>No tasks</h3>
                         )}

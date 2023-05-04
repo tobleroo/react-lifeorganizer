@@ -46,8 +46,9 @@ function AllTasksPage() {
   if (savedTasks.length > 0 && CalendarData.length > 0 && selectedDate) {
     return(
       <div className="AllComponentsBox">
-          <TasksBox allTasks={savedTasks}/>
-          <SelectedDate savedTasks={savedTasks} setSavedTasks={setSavedTasks} selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
+          <TasksBox allTasks={savedTasks} selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
+          <SelectedDate savedTasks={savedTasks} setSavedTasks={setSavedTasks} selectedDate={selectedDate} setSelectedDate={setSelectedDate}
+          CalendarData={CalendarData} setCalendarData={setCalendarData}/>
           <CalendarYearBox yearData={CalendarData} setSelectedDate={setSelectedDate}/>
       </div>
     )

@@ -1,7 +1,21 @@
 
 
 
-export default function TaskItem({task}){
+export default function TaskItem({task, selectedDate, setSelectedDate}){
+
+    function addToDay(){
+        const taskToDay = {
+            title: task.taskName,
+            timeToComplete: task.timeToComplete,
+            desc: task.taskDescription,
+            done: false
+        }
+        
+        //set to selectedDay task list
+        const newSelectedDay = {...selectedDate};
+        newSelectedDay.tasks.push(taskToDay);
+        setSelectedDate(newSelectedDay);
+    }
 
 
     return (
@@ -17,6 +31,9 @@ export default function TaskItem({task}){
             <div className="taskItemTimesCompleted taskData">
                 <label htmlFor="">completed:</label>
                 <p>{task.timeCompleted} times</p>
+            </div>
+            <div className="addToSelectedDayBox">
+                <button id="taskToSelDayBtn" onClick={addToDay}>+</button>
             </div>
         </div>
     )
