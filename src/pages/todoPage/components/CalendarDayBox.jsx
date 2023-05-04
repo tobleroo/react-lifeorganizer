@@ -14,7 +14,7 @@ export default function CalendarDayBox({days, setSelectedDate}){
                 days.map((dayData, index) => {
                     return (
                         <div className="dayBox" onClick={() => {changeSelectedDate(dayData)}}>
-                            <h5>{dayData.date}</h5>
+                            <p>{dayData.date}</p>
                             <p>{dayData.dayOfWeek}</p>
                             <CalendarTaskBox task={dayData.tasks}/>
                         </div>

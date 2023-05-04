@@ -98,10 +98,10 @@ export default function AddTasks({savedTasks, setSavedTasks, selectedDate, setSe
 
     return (
         <div className="AddTaskBox">
-            <h3>add new task</h3>
+            <h3 id="addNewTaskHead">add new task</h3>
 
             <div className="addTaskInputBox">
-                <div className="categoriSelectedBox">
+                <div className="categoriSelectedBox inputBox">
                     <label htmlFor="category">Category</label>
                     <input type="text" id="category" name="category" list="category-list" />
                     <datalist id="category-list">
@@ -114,29 +114,31 @@ export default function AddTasks({savedTasks, setSavedTasks, selectedDate, setSe
                         )}
                     </datalist>
                 </div>
-                <div className="inputTaskName">
+                <div className="inputTaskName inputBox">
                     <label htmlFor="taskName">Task name</label>
                     <input type="text" name="taskName" placeholder="task name" />
                 </div>
                 
-                <div className="addFrequencyBox">
+                <div className="addFrequencyBox inputBox">
                     <label htmlFor="dropdown">Repeated every:</label>
                     <div className="frequencyInputBox">
                         <input type="number" name="taskFrequency" placeholder="0" />
                         <select id="dropdown" name="fruit">
-                            <option value="apple">Days</option>
-                            <option value="banana">Weeks</option>
-                            <option value="orange">Years</option>
+                            <option value="days">Days</option>
+                            <option value="weeks">Weeks</option>
+                            <option value="months">Months</option>
+                            <option value="years">Years</option>
                         </select>
                     </div>
                 </div>
 
-                <div className="addTaskTimeBox">
+                <div className="addTaskTimeBox inputBox">
                     <label htmlFor="taskTimeToComplete">Time to complete task</label>
                     <input type="text" name="taskTimeToComplete" placeholder="task time to complete" />
                 </div>
 
-                <div className="addTaskDescBox">
+                <div className="addTaskDescBox inputBox">
+                    <label htmlFor="taskDesc">task description</label>
                     <textarea name="taskDesc" placeholder="task description"></textarea>
                 </div>
             </div>

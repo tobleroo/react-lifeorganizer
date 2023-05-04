@@ -20,21 +20,18 @@ export default function TaskItem({task, selectedDate, setSelectedDate}){
 
     return (
         <div className="taskItemData">
-            <div className="taskItemName taskData">
-                <label htmlFor="">Task name:</label>
+            <div className="taskItemName">
                 <p>{task.taskName}</p>
-            </div>
-            <div className="taskItemTime taskData">
-                <label htmlFor="">Time</label>
-                <p>{task.timeToComplete}</p>
-            </div>
-            <div className="taskItemTimesCompleted taskData">
-                <label htmlFor="">completed:</label>
-                <p>{task.timeCompleted} times</p>
-            </div>
-            <div className="addToSelectedDayBox">
                 <button id="taskToSelDayBtn" onClick={addToDay}>+</button>
             </div>
+            <div className="taskItemTime taskData">
+                <b>Time: {task.timeToComplete} minutes</b>
+            </div>
+            <div className="taskItemTimesCompleted taskData">
+                <b>Completed: {task.timeCompleted} times</b>
+            </div>
+
+           
         </div>
     )
 

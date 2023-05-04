@@ -8,8 +8,8 @@ export default function CalendarTaskBox({task}){
                 task.map((taskData, index) => {
                     return (
                         <div className="taskBox">
-                            <h5>{taskData.title}</h5>
-                            <p>{taskData.timeToComplete}</p>
+                            <p>{taskData.title}</p>
+                            {/* <p>time: {taskData.timeToComplete}</p> */}
                         </div>
                     )
                 }

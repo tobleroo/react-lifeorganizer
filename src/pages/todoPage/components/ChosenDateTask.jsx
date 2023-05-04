@@ -33,8 +33,8 @@ export default function ChosenDateTask({ selectedDate, setSelectedDate, Calendar
                 selectedDate.tasks.map((task, index) => {
                     return (
                         <div className="handleTask">
-                            <p>{task.title}</p>
                             <input type="checkbox" name="taskCompleted" />
+                            <p>{task.title}</p>
                             <button onClick={() => {removeOneTask(task)}}>remove</button>
                         </div>
                     )

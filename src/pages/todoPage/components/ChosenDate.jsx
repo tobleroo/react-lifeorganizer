@@ -14,18 +14,18 @@ export default function ChosenDate({selectedDate, setSelectedDate, CalendarData,
     return (
         <div className="ChosenDate">
             <div className="chosenData">
-                <h4>chosen day</h4>
-                <h5>{selectedDate.date}, {selectedDate.dayOfWeek}</h5>
+                <p>{selectedDate.dayOfWeek}</p>
+                <p>{selectedDate.date}</p> 
             </div>
             
             <div className="chosenDateTasksBox">
-                <h4>tasks</h4>
+                <p id="taskTitle">tasks</p>
                 <ChosenDateTask selectedDate={selectedDate} setSelectedDate={setSelectedDate}
                 CalendarData={CalendarData} setCalendarData={setCalendarData}/>
             </div>
             
             <div className="chosenDayNumbers">
-                <p>total time: {totalTime()}</p>
+                <b>total time: {totalTime()} minutes</b>
             </div>
             
 

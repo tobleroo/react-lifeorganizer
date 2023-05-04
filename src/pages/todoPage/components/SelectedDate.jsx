@@ -17,7 +17,7 @@ export  default function SelectedDate({savedTasks, setSavedTasks, selectedDate, 
             setSelectedDate={setSelectedDate}/>
 
             <div className="toBackEnd">
-                <button>Save all</button>
+                <button>Update</button>
             </div>
 
         </div>
