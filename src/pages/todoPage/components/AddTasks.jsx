@@ -88,6 +88,14 @@ export default function AddTasks({savedTasks, setSavedTasks, selectedDate, setSe
         return newTask;
     }
 
+    function saveToBoth(){
+        const repeatTask = createRepeatTaskFromInput();
+        const oneTimeTask = createOneTimeTask();
+
+        saveToTasklist(repeatTask);
+        saveTaskToSelectedDay(oneTimeTask);
+    }
+
     return (
         <div className="AddTaskBox">
             <h3>add new task</h3>
@@ -136,7 +144,7 @@ export default function AddTasks({savedTasks, setSavedTasks, selectedDate, setSe
             <div className="addTaskBtnBox">
                 <button id="saveTaskToDbBtn" onClick={saveToTasklist}>save to DB</button>
                 <button id="saveTodayTaskBtn" onClick={saveTaskToSelectedDay}>save to today</button>
-                <button id="saveToBothBtn">Both</button>
+                <button id="saveToBothBtn" onClick={saveToBoth}>Both</button>
             </div>
         </div>
     )
