@@ -167,7 +167,7 @@
 
 .ChosenDateTask{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content:space-between;
     border-bottom: solid black 2px;
 }

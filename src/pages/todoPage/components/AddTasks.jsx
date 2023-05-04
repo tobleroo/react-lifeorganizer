@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 
-export default function AddTasks({savedTasks, setSavedTasks}){
+export default function AddTasks({savedTasks, setSavedTasks, selectedDate, setSelectedDate}){
 
     const [newTask, setNewTask] = useState([]);
     const [categories, setCategories] = useState([]);
@@ -20,7 +20,7 @@ export default function AddTasks({savedTasks, setSavedTasks}){
     }
 
     function saveToTasklist(){
-        const newTask = createTaskFromInput();
+        const newTask = createRepeatTaskFromInput();
         const inputCategory = document.querySelector('#category').value;
 
         const categoryExists = savedTasks.find((existingCategory) => existingCategory.categoryName === inputCategory);
@@ -38,13 +38,37 @@ export default function AddTasks({savedTasks, setSavedTasks}){
         setSavedTasks([...savedTasks]); // create a new copy of the array to trigger re-render
     }
 
+    function saveTaskToSelectedDay(){
+        const newTask = createOneTimeTask();
+
+        //add new task to selected date
+        //create a dupplicate and add the new task to it
+        const newSelectedDate = {...selectedDate};
+        newSelectedDate.tasks.push(newTask);
+        setSelectedDate(newSelectedDate); // create a new copy of the array to trigger re-render
+        console.log(selectedDate);
+
+    }
+
     //save task to selected date
 
-    function saveToSelected(){
+    function createOneTimeTask(){
 
-    };
+        const taskName = document.querySelector('[name="taskName"]').value;
+        const taskTimeToComplete = document.querySelector('[name="taskTimeToComplete"]').value;
+        const taskDesc = document.querySelector('[name="taskDesc"]').value;
 
-    function createTaskFromInput(){
+        const oneTimeTask = {
+            title: taskName,
+            timeToComplete: taskTimeToComplete,
+            taskDescription: taskDesc,
+            done: false
+        }
+
+        return oneTimeTask;
+    }
+
+    function createRepeatTaskFromInput(){
         
         const taskName = document.querySelector('[name="taskName"]').value;
         const taskFrequency = document.querySelector('[name="taskFrequency"]').value;
@@ -111,7 +135,7 @@ export default function AddTasks({savedTasks, setSavedTasks}){
 
             <div className="addTaskBtnBox">
                 <button id="saveTaskToDbBtn" onClick={saveToTasklist}>save to DB</button>
-                <button id="saveTodayTaskBtn">save to today</button>
+                <button id="saveTodayTaskBtn" onClick={saveTaskToSelectedDay}>save to today</button>
                 <button id="saveToBothBtn">Both</button>
             </div>
         </div>

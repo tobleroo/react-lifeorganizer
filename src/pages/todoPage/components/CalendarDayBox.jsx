@@ -1,10 +1,10 @@
 
 import CalendarTaskBox from "./CalendarTaskBox"
 
-export default function CalendarDayBox({days}){
+export default function CalendarDayBox({days, setSelectedDate}){
 
     const changeSelectedDate = (dayData) => {
-        console.log(dayData);
+        setSelectedDate(dayData);
     }
 
 

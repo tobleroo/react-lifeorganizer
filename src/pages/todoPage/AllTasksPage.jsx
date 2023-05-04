@@ -27,12 +27,15 @@ function AllTasksPage() {
   useEffect(() => {
     setSavedTasks(demoTaskList);
     setCalendarData(demoTodoCalendar);
+    
   }, []);
 
   useEffect(() => {
     if (CalendarData && CalendarData.length > 0) {
-      setTodayDate();
-      console.log("selectedDate", selectedDate);
+      if(!selectedDate){
+        setTodayDate();
+      }
+
     }
   }, [CalendarData, selectedDate]);
 
@@ -44,16 +47,12 @@ function AllTasksPage() {
     setSelectedDate(todayDate);
   }
 
-  function changeSelectedDate(dayData) {
-    setSelectedDate(dayData);
-  }
-
   if (savedTasks.length > 0 && CalendarData.length > 0 && selectedDate) {
     return(
       <div className="AllComponentsBox">
           <TasksBox allTasks={savedTasks}/>
           <SelectedDate savedTasks={savedTasks} setSavedTasks={setSavedTasks} selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
-          <CalendarYearBox yearData={CalendarData}/>
+          <CalendarYearBox yearData={CalendarData} setSelectedDate={setSelectedDate}/>
       </div>
     )
   } else {

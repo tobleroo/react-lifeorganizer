@@ -1,6 +1,6 @@
 
 import CalendarDayBox from "./CalendarDayBox"
-export default function CalendarMonthBox({months}){
+export default function CalendarMonthBox({months, setSelectedDate}){
 
     return (
         <div className="CalendarMonthBox">
@@ -9,7 +9,7 @@ export default function CalendarMonthBox({months}){
                     return (
                         <div className="monthBox">
                             <h5>{weekData.name}</h5>
-                            <CalendarDayBox days={weekData.days}/>
+                            <CalendarDayBox days={weekData.days} setSelectedDate={setSelectedDate}/>
                         </div>
                     )
                 }

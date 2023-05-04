@@ -11,6 +11,7 @@ export default function ChosenDateTask({ tasks }) {
                         <div className="handleTask">
                             <p>{task.title}</p>
                             <input type="checkbox" name="taskCompleted" />
+                            <button>remove</button>
                         </div>
                     )
                 }
@@ -18,9 +19,6 @@ export default function ChosenDateTask({ tasks }) {
             ) : (
                 <h5>no tasks</h5>
             )}
-            <div className="removeBox">
-                <button>remove</button>
-            </div>
         </div>
     )
 }
