@@ -6,6 +6,11 @@ React todo app
 this app will start with a simple todo page that i will then connect to a rest API using c# 
 The idea is to later extend the website with more features such as journals and auto-generating tasks, etc.
 
+# Features
+
+- save tasks to the database , so that they can be assigned later on to whichever date.
+- selected each day from the calendar from the right, and then add or remove tasks from that specific day
+
 
 ![alt text](https://github.com/tobleroo/react-todo/blob/master/pictures/react-todo-page.png?raw=true)
 
