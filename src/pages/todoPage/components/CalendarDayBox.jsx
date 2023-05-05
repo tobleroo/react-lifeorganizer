@@ -24,9 +24,6 @@ export default function CalendarDayBox({days, setSelectedDate}){
             ) : (
                 <h5>no data</h5>
             )}
-
-                      
-
         </div>
     )
 
