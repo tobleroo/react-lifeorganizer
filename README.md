@@ -7,7 +7,7 @@ this app will start with a simple todo page that i will then connect to a rest A
 The idea is to later extend the website with more features such as journals and auto-generating tasks, etc.
 
 
-![alt text]()
+![alt text](https://github.com/tobleroo/react-todo/blob/master/pictures/react-todo-page.png?raw=true)
 
 
 
