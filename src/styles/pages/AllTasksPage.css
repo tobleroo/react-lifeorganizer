@@ -185,7 +185,7 @@
 
 .AddTaskBox input{
     font-size: x-large;
-    background-color: rgb(83, 83, 83);
+    background-color: rgb(177, 177, 177);
     color: aliceblue;
 }
 
@@ -195,8 +195,7 @@
     border-radius: 15px;
     padding: .5rem;
     height: 10rem;
-    background-color: rgb(56, 56, 56);
-    
+    background-color: rgb(175, 175, 175);
 }
 
 .inputBox{
@@ -298,13 +297,13 @@
     overflow: scroll;
 }
 
-.yearBox{
-    margin: 1rem 0;
-}
-
 #yearNumber, #monthNumber{
     font-size: xx-large;
-    margin: .5rem;
+    /* margin: .5rem; */
+}
+
+.yearBox{
+    width: 99%;
 }
 
 .CalendarMonthBox{
@@ -312,20 +311,38 @@
     flex-direction: column;
     align-items: center;
     margin: 1rem;
-    background-color: inherit;
     border-radius: 15px;
+}
+
+.monthBox{
+    width: 98%;
 }
 
 .dayBox{
     border: solid green 2px;
-    background-color: rgb(25, 218, 25);
-    margin: 1rem 0;
-    padding: 1rem;
+    background-color: rgb(22, 151, 22);
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+
+.dayBox:hover{
+    cursor: pointer;
+    background-color: rgb(0, 255, 13);
+}
+
+#dayDate, #dayDay{
+    font-size: larger;
+    font-weight: 600;
+    color: rgb(6, 7, 6);
+    /* margin: .5rem; */
 }
 
 .CalendarTasksBox{
     display: flex;
     flex-direction: column;
+    border: solid black 1px;
+    border-radius: 10px;
+    padding: .3rem;
 }
 
 .taskBox{
@@ -335,7 +352,7 @@
 }
 
 .taskBox p{
-    margin: .1rem 0;
+    /* margin: .1rem 0; */
     font-size: larger;
     font-weight: 500;
 }

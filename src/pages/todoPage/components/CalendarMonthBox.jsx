@@ -8,7 +8,7 @@ export default function CalendarMonthBox({months, setSelectedDate}){
                 months.map((weekData, index) => {
                     return (
                         <div className="monthBox">
-                            <h5 id="monthNumber">{weekData.name}</h5>
+                            <p id="monthNumber">{weekData.name}</p>
                             <CalendarDayBox days={weekData.days} setSelectedDate={setSelectedDate}/>
                         </div>
                     )

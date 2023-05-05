@@ -9,7 +9,7 @@ export default function CalendarYearBox({yearData, setSelectedDate}){
                 yearData.map((monthData, index) => {
                     return (
                         <div className="yearBox">
-                            <h5 id="yearNumber">{monthData.year}</h5>
+                            <p id="yearNumber">{monthData.year}</p>
                             <CalendarMonthBox months={monthData.months} setSelectedDate={setSelectedDate}/>
                         </div>
                     )
