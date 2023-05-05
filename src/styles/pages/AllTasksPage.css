@@ -1,0 +1,359 @@
+
+.AllComponentsBox{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(61, 65, 65);
+    width:99%;
+    max-width: 90rem;
+}
+
+/* tasks list (to the left) */
+
+.tasks-box{
+    background-color: gray;
+    margin: 1rem 0 1rem 2rem;
+    padding: 0 1rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    overflow: hidden;
+    max-width: 25rem;
+}
+
+.taskCategoryBox{
+    background-color: inherit;
+    overflow: scroll;
+    height: 93%;
+
+}
+
+.one-category{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(58, 58, 58);
+    margin: 1rem 0;
+    border-radius: 15px;
+    padding: .5rem 2rem;
+    color: rgb(224, 224, 224);
+    font-weight: 200;
+}
+
+.oneTaskData{
+    display: flex;
+    flex-direction: column;
+    border: solid black 1px;
+    margin: .5rem 0;
+    background-color: lawngreen;
+}
+
+.taskName{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.smallData{
+    display: flex;
+    flex-direction: row;
+}
+
+.dataBox{
+    display: flex;
+    flex-direction: column;
+    margin: 0 .5rem;
+    border: solid black 1px;
+    border-radius: 15px;
+    padding: .5rem;
+}
+
+.dataBox b, p{
+    padding: 0;
+    margin: 0;
+}
+
+.descBox{
+    width: 100%;
+    border-radius: 15px;
+    padding: .5rem;
+    margin: .5rem 0;
+}
+
+.taskItemData{
+    display: flex;
+    flex-direction: column;
+    border: solid rgb(31, 104, 56) 2px;
+    border-radius: 15px;
+    margin: .2rem 0;
+    padding: 0 1rem;
+}
+
+.taskItemName{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    border-bottom: solid black 1px;
+    padding: .5rem 1rem;
+    font-size: larger;
+}
+
+.taskData{
+    padding: .5rem .2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* middle section */
+
+.middleBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 1rem 1.5rem;
+}
+
+/* chosen date box */
+
+.ChosenDate{
+    background-color: rgb(83, 83, 83);
+    border: solid green 2px;
+    border-radius: 15px;
+}
+
+.chosenData{
+    margin: .5rem 0 0 1rem;
+    font-size: x-large;
+    color: rgb(214, 214, 214);
+}
+
+.chosenDateTasksBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#taskTitle{
+    margin: 1rem 0;
+    font-size: xx-large;
+    color: rgb(214, 214, 214);
+}
+
+.ChosenDateTask{
+    width: 98%;
+}
+
+.handleTask{
+    margin: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: lightgray;
+    padding: .3rem;
+    border-radius: 10px;
+}
+
+.chosenDayNumbers{
+    margin: 1rem;
+    /* background-color: aqua; */
+    text-align: center;
+}
+
+
+
+/* add tasks box */
+
+.AddTaskBox{
+    background-color: rgb(114, 114, 114);
+    border: solid black 2px;
+    font-size: x-large;
+}
+
+#addNewTaskHead{
+    text-align: center;
+    color: aliceblue;
+}
+
+.AddTaskBox input{
+    font-size: x-large;
+    background-color: rgb(177, 177, 177);
+    color: aliceblue;
+}
+
+.AddTaskBox textarea{
+    font-size: larger;
+    resize: none;
+    border-radius: 15px;
+    padding: .5rem;
+    height: 10rem;
+    background-color: rgb(175, 175, 175);
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.addTaskBtnBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+
+.addTaskBtnBox button{
+    font-size: x-large;
+    background-color: aliceblue;
+    border-color: rgb(134, 134, 134);
+    border-radius: 15px;
+    color: rgb(5, 5, 5);
+}
+
+.frequencyInputBox input{
+    max-width: 20%;
+}
+
+.AddTaskBox select{
+    font-size: large;
+    background-color: rgb(83, 83, 83);
+    color: aliceblue;
+
+    padding: .4rem;
+}
+
+.addTaskBtnBox button:hover{
+    cursor: pointer;
+}
+
+#saveTaskToDbBtn{
+    background-color: rgb(12, 68, 12);
+}
+
+#saveTaskToDbBtn:hover{
+    background-color: rgb(15, 255, 27);
+}
+
+#saveTodayTaskBtn{
+    background-color: rgb(83, 83, 26);
+}
+
+#saveTodayTaskBtn:hover{
+    background-color: rgb(240, 240, 23);
+}
+
+#saveToBothBtn{
+    background-color: rgb(21, 91, 124);
+}
+
+#saveToBothBtn:hover{
+    background-color: rgb(18, 182, 211);
+}
+
+
+
+
+
+/* save to backend  */
+
+.toBackEnd{
+    margin: 3rem auto;;
+}
+.toBackEnd button{
+    font-size: x-large;
+    background-color: green;
+    padding: .5rem .7rem;
+    border-radius: 15px;
+}
+.toBackEnd button:hover{
+    cursor: pointer;
+    background-color: rgb(15, 255, 27);
+}
+
+
+
+
+
+
+/* right section */
+
+.CalendarYearBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    background-color: rgb(63, 63, 63);
+    border: green 1px solid;
+    border-radius: 15px;
+    overflow: scroll;
+}
+
+#yearNumber, #monthNumber{
+    font-size: xx-large;
+    /* margin: .5rem; */
+}
+
+.yearBox{
+    width: 99%;
+}
+
+.CalendarMonthBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    border-radius: 15px;
+}
+
+.monthBox{
+    width: 98%;
+}
+
+.dayBox{
+    border: solid green 2px;
+    background-color: rgb(22, 151, 22);
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+
+.dayBox:hover{
+    cursor: pointer;
+    background-color: rgb(0, 255, 13);
+}
+
+#dayDate, #dayDay{
+    font-size: larger;
+    font-weight: 600;
+    color: rgb(6, 7, 6);
+    /* margin: .5rem; */
+}
+
+.CalendarTasksBox{
+    display: flex;
+    flex-direction: column;
+    border: solid black 1px;
+    border-radius: 10px;
+    padding: .3rem;
+}
+
+.taskBox{
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid black 1px;
+}
+
+.taskBox p{
+    /* margin: .1rem 0; */
+    font-size: larger;
+    font-weight: 500;
+}
+

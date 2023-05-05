@@ -6,10 +6,16 @@ import "../styles/components/NavBar.css";
 
 function navBar(){
     return(
-        <nav className="navBar">
-            <Link to="/" className="link">homepage</Link>
-            <Link to="/all-tasks">task page</Link>
-        </nav>
+        <div className="navBox">
+            <div className="websiteNameBox">
+                <h1 className="websiteName">Task Manager</h1>
+            </div>
+            <nav className="navBar">
+                <Link to="/" className="link">homepage</Link>
+                <Link to="/all-tasks">task page</Link>
+            </nav>
+        </div>
+        
     )
 }
 

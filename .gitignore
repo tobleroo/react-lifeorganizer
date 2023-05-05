@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# pictures for readme demonstration
+
+
 # testing
 /coverage
 
